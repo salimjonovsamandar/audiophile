@@ -1,0 +1,72 @@
+.headphones-hero {
+  width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headphones-hero .img-section img {
+  width: 540px;
+  height: 560px;
+}
+.headphones-hero .tex-section {
+  width: 445px;
+  height: 343px;
+}
+.headphones-hero .tex-section p {
+  color: rgb(216, 125, 74);
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.headphones-hero .tex-section h2 {
+  color: rgb(0, 0, 0);
+  font-family: Manrope;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 1.43px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.headphones-hero .tex-section h3 {
+  color: rgb(0, 0, 0);
+  font-family: Manrope;
+  opacity: 0.5;
+  font-size: 15px;
+  margin-top: 32px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.headphones-hero .tex-section button {
+  padding: 15px 30px;
+  margin-top: 40px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  background: rgb(216, 125, 74);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.headphones-hero .tex-section button:hover {
+  background: #fbaf85;
+}

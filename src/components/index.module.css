@@ -1,7 +1,12 @@
-header {
+.bg__container {
   background: #131313;
+}
+
+header {
+  max-width: 1110px;
   width: 100%;
-  padding: 0px 165px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header__content {
   display: flex;
@@ -96,7 +101,7 @@ header {
 .footer {
   width: 100%;
   background-color: #131313;
-  padding: 75px 165px;
+  padding: 75px 200px;
 }
 .footer__nav {
   width: 100%;
@@ -134,6 +139,12 @@ header {
   letter-spacing: 0px;
   text-align: left;
 }
+@media screen and (max-width: 1200px) {
+  .header__content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 
 @media screen and (max-width: 998px) {
   header {
@@ -161,8 +172,16 @@ header {
   .footer__links {
     margin-top: 10px;
   }
+  .header__logo {
+    margin-left: -70px;
+  }
 }
+
 @media screen and (max-width: 512px) {
+  .header__content {
+    width: 100%;
+  }
+
   .footer {
     text-align: center;
   }
@@ -171,7 +190,6 @@ header {
     width: 100%;
     display: block;
   }
-
   .footer__links ul li {
     text-align: center;
   }

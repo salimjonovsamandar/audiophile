@@ -1,0 +1,96 @@
+.products {
+  padding-top: 120px;
+  padding-bottom: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cards {
+  width: 350px;
+  height: 204px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  padding-top: 116px;
+  text-align: center;
+  margin-top: 80px;
+}
+.headphones {
+  position: relative;
+}
+.images {
+  position: absolute;
+  margin-left: 110px;
+}
+
+.cards h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.2857142686843872px;
+}
+
+.cards p {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  opacity: 0.5;
+  margin-top: 15px;
+}
+.cards span {
+  color: #d87d4a;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 768px) {
+  .products {
+    width: 100%;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .headphones {
+    width: 223px;
+  }
+  .images {
+    margin-left: 75px;
+  }
+  .images img {
+    margin-left: 0px;
+    width: 80px;
+    height: 104px;
+  }
+  .cards {
+    width: 223px;
+    height: 165px;
+    margin-top: 50px;
+  }
+  .cards h3 {
+    margin-top: -38px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .products {
+    width: 378px;
+    padding-top: 40px;
+    padding-bottom: 120px;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .headphones {
+    margin-bottom: 16px;
+    width: 327px;
+  }
+  .images {
+    margin-left: 120px;
+  }
+  .cards {
+    width: 327px;
+  }
+}

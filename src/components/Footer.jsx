@@ -17,10 +17,18 @@ function Footer() {
         </div>
         <div className={styles.footer__links}>
           <ul>
-            <li>HOME</li>
-            <li>HEADPHONES</li>
-            <li>SPEAKERS</li>
-            <li>EARPHONES</li>
+            <Link to="/home">
+              <li>HOME</li>
+            </Link>
+            <Link to="/headphones">
+              <li>HEADPHONES</li>
+            </Link>
+            <Link to="/speakers">
+              <li>SPEAKERS</li>
+            </Link>
+            <Link to="/earphones">
+              <li>EARPHONES</li>
+            </Link>
           </ul>
         </div>
       </div>
@@ -32,13 +40,13 @@ function Footer() {
           demo facility - we’re open 7 days a week.
         </p>
         <div className={styles.boglanish}>
-          <Link>
+          <Link to="/">
             <img src={facebook} />
           </Link>
-          <Link>
+          <Link to="/">
             <img src={twitter} />
           </Link>
-          <Link>
+          <Link to="/">
             <img src={instagram} />
           </Link>
         </div>

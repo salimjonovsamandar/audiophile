@@ -1,54 +1,91 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 import SeeProduct from "./pages/SeeProduct";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 import "./App.css";
-import MainLayout from "./layout/MainLayout";
+import Layout from "./layout/MainLayout";
 
 function App() {
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!localStorage.getItem("token") && location.pathname != "/register") {
+      navigate("/login");
+    }
+  }, []);
+
+  function ProtectedRoute({
+    children,
+    redirectTo = "/login",
+    isAuthentication,
+  }) {
+    if (!isAuthentication) {
+      navigate(redirectTo);
+    }
+    return children;
+  }
+
   return (
     <>
       <Routes>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+
         <Route
-          path="/"
+          path="/home"
           element={
-            <MainLayout>
-              <Home></Home>
-            </MainLayout>
+            <ProtectedRoute isAuthentication={token ? true : false}>
+              <Layout>
+                <Home></Home>
+              </Layout>
+            </ProtectedRoute>
           }
         ></Route>
         <Route
           path="/headphones"
           element={
-            <MainLayout>
-              <Headphones></Headphones>
-            </MainLayout>
+            <ProtectedRoute isAuthentication={token ? true : false}>
+              <Layout>
+                <Headphones></Headphones>
+              </Layout>
+            </ProtectedRoute>
           }
         ></Route>
         <Route
           path="/speakers"
           element={
-            <MainLayout>
-              <Speakers></Speakers>
-            </MainLayout>
+            <ProtectedRoute isAuthentication={token ? true : false}>
+              <Layout>
+                <Speakers></Speakers>
+              </Layout>
+            </ProtectedRoute>
           }
         ></Route>
         <Route
           path="/earphones"
           element={
-            <MainLayout>
-              <Earphones></Earphones>
-            </MainLayout>
+            <ProtectedRoute isAuthentication={token ? true : false}>
+              <Layout>
+                <Earphones></Earphones>
+              </Layout>
+            </ProtectedRoute>
           }
         ></Route>
         <Route
           path="/seeProduct"
           element={
-            <MainLayout>
-              <SeeProduct></SeeProduct>
-            </MainLayout>
+            <ProtectedRoute isAuthentication={token ? true : false}>
+              <Layout>
+                <SeeProduct></SeeProduct>
+              </Layout>
+            </ProtectedRoute>
           }
         ></Route>
       </Routes>
