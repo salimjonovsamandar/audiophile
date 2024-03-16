@@ -7,6 +7,7 @@ import Earphones from "./pages/Earphones";
 import SeeProduct from "./pages/SeeProduct";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Error from "./pages/Error";
 import "./App.css";
 import Layout from "./layout/MainLayout";
 
@@ -88,6 +89,7 @@ function App() {
             </ProtectedRoute>
           }
         ></Route>
+        <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </>
   );

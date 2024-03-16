@@ -16,8 +16,8 @@ function index() {
           <div className={styles.cards}>
             <h3>HEADPHONES</h3>
             <p>
-              <Link>
-                SHOP{" "}
+              <Link to="/headphones">
+                SHOP
                 <span>
                   <b>→</b>
                 </span>
@@ -33,8 +33,8 @@ function index() {
           <div className={styles.cards}>
             <h3>SPEAKERS</h3>
             <p>
-              <Link>
-                SHOP{" "}
+              <Link to="/speakers">
+                SHOP
                 <span>
                   <b>→</b>
                 </span>
@@ -50,8 +50,8 @@ function index() {
           <div className={styles.cards}>
             <h3>EARPHONES</h3>
             <p>
-              <Link>
-                SHOP{" "}
+              <Link to="/earphones">
+                SHOP
                 <span>
                   <b>→</b>
                 </span>

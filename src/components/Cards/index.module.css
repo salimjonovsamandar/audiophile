@@ -37,7 +37,12 @@
   letter-spacing: 1px;
   opacity: 0.5;
   margin-top: 15px;
+  transition: all 0.5s;
 }
+.cards p:hover {
+  color: #d87d4a;
+}
+
 .cards span {
   color: #d87d4a;
   font-weight: 900;
