@@ -7,7 +7,7 @@ import MainTitle from "../../components/MainTitle";
 function Speakers() {
   return (
     <>
-      <MainTitle title="SPEAKERS"></MainTitle>
+      <MainTitle title="SPEACERS"></MainTitle>
       <div className={styles.container}>
         <Cards></Cards>
         <Audio></Audio>

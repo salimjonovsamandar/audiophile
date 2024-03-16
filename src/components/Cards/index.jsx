@@ -16,7 +16,7 @@ function index() {
           <div className={styles.cards}>
             <h3>HEADPHONES</h3>
             <p>
-              <Link to="/headphones">
+              <Link to="/pages/HEADPHONES">
                 SHOP
                 <span>
                   <b>→</b>
@@ -33,7 +33,7 @@ function index() {
           <div className={styles.cards}>
             <h3>SPEAKERS</h3>
             <p>
-              <Link to="/speakers">
+              <Link to="/pages/SPEAKERS">
                 SHOP
                 <span>
                   <b>→</b>
@@ -50,7 +50,7 @@ function index() {
           <div className={styles.cards}>
             <h3>EARPHONES</h3>
             <p>
-              <Link to="/earphones">
+              <Link to="pages/EARPHONES">
                 SHOP
                 <span>
                   <b>→</b>

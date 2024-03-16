@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import React from "react";
 import styles from "./index.module.css";
 import Cards from "../../components/Cards";
@@ -5,11 +6,15 @@ import Audio from "../../components/Audio";
 import MainTitle from "../../components/MainTitle";
 import LeftImages from "../../components/LeftImages";
 
+
 function Headphones() {
+  const { page } = useParams();
+
   return (
     <>
-      <MainTitle title="HEADPHONES"></MainTitle>
-      <div className={styles.container}>
+      <MainTitle title={page}>HEADPHONES</MainTitle>
+      <div className={styles.contain}>
+        <LeftImages></LeftImages>
         <Cards></Cards>
         <Audio></Audio>
       </div>

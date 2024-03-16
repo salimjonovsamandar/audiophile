@@ -1,37 +1,56 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-function HeroCard({
-  nav,
-  image,
-  cardHeadertitle,
-  cardHerotitle,
-  description,
-  Button,
-}) {
-  const navigate = useNavigate();
-  function hendalClick(e) {
-    navigate(`${e}`);
-  }
+function HeroCard() {
+  const { page } = useParams();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:3004/${page}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [page]);
 
   return (
-    <div className="headphones-hero">
-      <div className="img-section">
-        <img src={image} alt="hero image" />
-      </div>
-      <div className="tex-section">
-        <p>{cardHeadertitle}</p>
-        <h2>{cardHerotitle}</h2>
-        <h3>{description}</h3>
-        <button
-          onClick={() => {
-            hendalClick(nav);
-          }}
-        >
-          {Button}
-        </button>
-      </div>
+    <div>
+      {data.map((el, index) => {
+        let flexDirection = "";
+        if (index % 2 == 1) {
+          flexDirection = "row-reverse";
+        } else {
+          flexDirection = "reverse";
+        }
+        return (
+          <div
+            key={index}
+            status={(index + 1) % 2 == 0 ? "right" : "left"}
+            className={styles.card__wrapper}
+            style={{ flexDirection: `${flexDirection}` }}
+          >
+            <div className={styles.card__img}>
+              <img src={el.image} />
+            </div>
+            <div className={styles.card__title}>
+              <h4>NEW PRODUCT</h4>
+              <h2>{el.name}</h2>
+              <p>{el.description}</p>
+              <Link to={`/product/${el.id}`}>
+                <button>See Product</button>
+              </Link>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

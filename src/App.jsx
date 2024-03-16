@@ -50,7 +50,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/headphones"
+          path="/pages/:page"
           element={
             <ProtectedRoute isAuthentication={token ? true : false}>
               <Layout>
@@ -60,7 +60,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/speakers"
+          path="/pages/:page"
           element={
             <ProtectedRoute isAuthentication={token ? true : false}>
               <Layout>
@@ -70,7 +70,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/earphones"
+          path="/pages/:page"
           element={
             <ProtectedRoute isAuthentication={token ? true : false}>
               <Layout>
@@ -80,7 +80,7 @@ function App() {
           }
         ></Route>
         <Route
-          path="/seeProduct"
+          path="/pages/:page"
           element={
             <ProtectedRoute isAuthentication={token ? true : false}>
               <Layout>

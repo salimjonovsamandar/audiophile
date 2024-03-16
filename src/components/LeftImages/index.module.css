@@ -1,72 +1,67 @@
-.headphones-hero {
-  width: 1110px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 160px;
+.card__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 160px;
 }
-
-.headphones-hero .img-section img {
+.card__img {
   width: 540px;
   height: 560px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 241, 241);
 }
-.headphones-hero .tex-section {
+.card__title {
   width: 445px;
-  height: 343px;
 }
-.headphones-hero .tex-section p {
-  color: rgb(216, 125, 74);
-  font-family: Manrope;
+.card__title h4 {
   font-size: 14px;
   font-weight: 400;
   line-height: 19px;
   letter-spacing: 10px;
   text-align: left;
+  color: #d87d4a;
+  margin-bottom: 16px;
   text-transform: uppercase;
 }
-
-.headphones-hero .tex-section h2 {
-  color: rgb(0, 0, 0);
-  font-family: Manrope;
+.card__title h2 {
+  width: 400px;
   font-size: 40px;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 1.43px;
+  letter-spacing: 1.4285714626312256px;
   text-align: left;
+  margin-bottom: 32px;
   text-transform: uppercase;
-  margin-top: 16px;
 }
-
-.headphones-hero .tex-section h3 {
-  color: rgb(0, 0, 0);
-  font-family: Manrope;
-  opacity: 0.5;
+.card__title p {
+  width: 445px;
   font-size: 15px;
-  margin-top: 32px;
   font-weight: 400;
   line-height: 25px;
   letter-spacing: 0px;
   text-align: left;
+  color: black;
+  opacity: 0.5;
+  margin-bottom: 40px;
 }
-
-.headphones-hero .tex-section button {
+.card__wrapper button {
+  cursor: pointer;
+  background: rgb(216, 125, 74);
   padding: 15px 30px;
-  margin-top: 40px;
-  border: none;
   color: rgb(255, 255, 255);
-  font-family: Manrope;
   font-size: 13px;
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 1px;
   text-align: left;
   text-transform: uppercase;
-  background: rgb(216, 125, 74);
-  transition: all 0.5s;
-  cursor: pointer;
+  border: none;
 }
-.headphones-hero .tex-section button:hover {
-  background: #fbaf85;
+
+.card__img img {
+  width: 295.84px;
+  height: 385px;
 }
