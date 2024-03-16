@@ -37,7 +37,7 @@ function Login() {
         email: "",
         password: `${passwordRef.current.value}`,
       };
-      fetch(`${import.meta.env.VITE_API + "auth/signin"}`, {
+      fetch(`${"https://auth-rg69.onrender.com/api/auth/signin"}`, {
         method: "POST",
         headers: {
           "content-type": "application/json",
