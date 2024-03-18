@@ -67,7 +67,9 @@ function App() {
             isAuthenticated={token ? true : false}
             redirectTo="/login"
           >
-            <Checkout />
+            <Layout>
+              <Checkout />
+            </Layout>
           </ProtectedRoute>
         }
       />

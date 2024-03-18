@@ -181,7 +181,6 @@ function Checkout() {
       </div>
       {show && (
         <div className={styles.modal}>
-          <img src="./tick.png" alt="tick" />
           <h2>THANK YOU FOR YOUR PURCHASE</h2>
           <p>Please confirm your email shortly.</p>
           <div className={styles.modal__info}>
