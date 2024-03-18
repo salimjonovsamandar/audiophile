@@ -1,12 +1,12 @@
-import React from "react";
-import Logo from "../../assets/logo.svg";
-import "../Login/index.css";
+import React, { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useRef } from "react";
+import Logo from "../../assets/logo.svg";
+import styles from "./index.module.css";
 
 function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+
   const usernameRef = useRef("");
   const passwordRef = useRef("");
 
@@ -26,12 +26,11 @@ function Login() {
     return true;
   }
 
-  function hendleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    const isValidate = validate();
+    const isValid = validate();
 
-    if (isValidate) {
-      setIsLoading(true);
+    if (isValid) {
       let data = {
         username: `${usernameRef.current.value}`,
         email: "",
@@ -53,29 +52,46 @@ function Login() {
         })
         .catch((error) => {
           alert("Bunday foydalanuvchi mavjud emas");
-          // console.error("Ma'lumotlarni olishda xatolik yuz berdi:", error);
         });
     }
   }
 
   return (
-    <div className="bgcontainer">
-      <div className="containerLogin">
-        <div className="registerLogo">
+    <div className={styles.bgcontainer}>
+      <div className={styles.containerLogin}>
+        <div className={styles.registerLogo}>
           <img src={Logo} alt="Logo icon" />
         </div>
-        <div className="formWrapper">
+        <div className={styles.formWrapper}>
           <h3>Login</h3>
-          <form className="form">
-            <input ref={usernameRef} type="text" placeholder="Usename" />
-            <input ref={passwordRef} type="Password" placeholder="Password" />
-            <button onClick={hendleSubmit} disabled={isLoading}>
+          <div className="form__wrap">
+            <input
+              className={styles.input}
+              ref={usernameRef}
+              type="text"
+              placeholder="Username"
+            />
+            <input
+              className={styles.input}
+              ref={passwordRef}
+              type="password"
+              placeholder="Password"
+            />
+            <button
+              className={styles.button}
+              onClick={handleSubmit}
+              type="submit"
+              disabled={isLoading}
+            >
               {isLoading ? "Loading..." : "Login to your account"}
             </button>
-            <p>
-              Already have an account? <Link to="/register">Register</Link>
+            <p className={styles.p}>
+              Already have an account?{" "}
+              <Link className={styles.a} to="/register">
+                Register
+              </Link>
             </p>
-          </form>
+          </div>
         </div>
       </div>
     </div>

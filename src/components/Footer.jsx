@@ -17,16 +17,16 @@ function Footer() {
         </div>
         <div className={styles.footer__links}>
           <ul>
-            <Link to="/home">
+            <Link to="/">
               <li>HOME</li>
             </Link>
-            <Link to="/headphones">
+            <Link to="/pages/HEADPHONES">
               <li>HEADPHONES</li>
             </Link>
-            <Link to="/speakers">
+            <Link to="/pages/SPEAKERS">
               <li>SPEAKERS</li>
             </Link>
-            <Link to="/earphones">
+            <Link to="/pages/EARPHONES">
               <li>EARPHONES</li>
             </Link>
           </ul>

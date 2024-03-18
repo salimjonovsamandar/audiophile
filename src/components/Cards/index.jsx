@@ -50,7 +50,7 @@ function index() {
           <div className={styles.cards}>
             <h3>EARPHONES</h3>
             <p>
-              <Link to="pages/EARPHONES">
+              <Link to="/pages/EARPHONES">
                 SHOP
                 <span>
                   <b>→</b>

@@ -7,6 +7,11 @@ import Cards from "../../components/Cards";
 import Audio from "../../components/Audio";
 
 function Home() {
+  window.scrollTo({
+    top:0,
+    behavior: "smooth",
+  });
+  
   return (
     <>
       <div className={styles.main}>
@@ -18,7 +23,7 @@ function Home() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link to="/seeProduct">
+            <Link to="/pages/HEADPHONES/4">
               <button>See Product</button>
             </Link>
           </div>
@@ -40,7 +45,7 @@ function Home() {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <Link to="/seeProduct">
+            <Link to="/pages/SPEAKERS/6">
               <button>See Product</button>
             </Link>
           </div>
@@ -50,7 +55,7 @@ function Home() {
         <div className={styles.speak}>
           <div className={styles.speak__title}>
             <h4>ZX7 SPEAKER</h4>
-            <Link to="/seeProduct">
+            <Link to="/pages/SPEAKERS/5">
               <button>See Product</button>
             </Link>
           </div>
@@ -63,7 +68,7 @@ function Home() {
           </div>
           <div className={styles.earphones_title}>
             <h4>YX1 EARPHONES</h4>
-            <Link to="/seeProduct">
+            <Link to="/pages/EARPHONES/1">
               <button>See Product</button>
             </Link>
           </div>

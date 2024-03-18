@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.svg";
-import "../Register/index.css";
-import { useNavigate } from "react-router-dom";
+import styles from "./index.module.css";
 
 function Register() {
   const [isLoading, setIsLoading] = useState(false);
@@ -17,9 +15,10 @@ function Register() {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
   }
+
   function validate() {
     if (!usernameRef.current.value.trim().length) {
-      alert("username kiritilishi shart !!!");
+      alert("Username kiritilishi shart !!!");
       usernameRef.current.focus();
       usernameRef.current.value = "";
       return false;
@@ -39,19 +38,19 @@ function Register() {
       return false;
     }
     if (!passwordRef.current.value.trim().length) {
-      alert("password kiritilishi shart !!!");
+      alert("Password kiritilishi shart !!!");
       passwordRef.current.focus();
       passwordRef.current.value = "";
       return false;
     }
     if (!repasswordRef.current.value.trim().length) {
-      alert("password kiritilishi shart !!!");
+      alert("Passwordni takrorlash kiritilishi shart !!!");
       repasswordRef.current.focus();
       repasswordRef.current.value = "";
       return false;
     }
-    if (passwordRef.current.value != repasswordRef.current.value) {
-      alert("Parollar bir biriga mos emas!!");
+    if (passwordRef.current.value !== repasswordRef.current.value) {
+      alert("Parollar bir biriga mos kelmayapti!!");
       passwordRef.current.focus();
       repasswordRef.current.value = "";
       return false;
@@ -59,22 +58,22 @@ function Register() {
     return true;
   }
 
-  function hendleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    const isValidate = validate();
+    const isValid = validate();
 
-    if (isValidate) {
+    if (isValid) {
       setIsLoading(true);
       let data = {
-        username: `${usernameRef.current.value}`,
-        email: `${emailRef.current.value}`,
-        password: `${passwordRef.current.value}`,
+        username: usernameRef.current.value,
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
       };
 
-      fetch(`${"https://auth-rg69.onrender.com/api/auth/signup"}`, {
+      fetch("https://auth-rg69.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       })
@@ -90,29 +89,52 @@ function Register() {
   }
 
   return (
-    <div className="bgcolor">
-      <div className="container-register  h-dvh  ">
-        <div className="registerLogo">
+    <div className={styles.bgcontainer}>
+      <div className={styles.containerLogin}>
+        <div className={styles.registerLogo}>
           <img src={Logo} alt="Logo icon" />
         </div>
-        <div className="formWrapper">
-          <h3>Sign Up</h3>
-          <form className="form">
-            <input ref={usernameRef} type="text" placeholder="Usename" />
-            <input ref={emailRef} type="email" placeholder="Email address" />
-            <input ref={passwordRef} type="Password" placeholder="Password" />
+        <div className={styles.formWrapper}>
+          <h3>Register</h3>
+          <div className="form__wrap" onSubmit={handleSubmit}>
+            <input
+              ref={usernameRef}
+              type="text"
+              placeholder="Username"
+              className={styles.input}
+            />
+            <input
+              ref={emailRef}
+              type="email"
+              placeholder="Email"
+              className={styles.input}
+            />
+            <input
+              ref={passwordRef}
+              type="password"
+              placeholder="Password"
+              className={styles.input}
+            />
             <input
               ref={repasswordRef}
-              type="Password"
-              placeholder="Repeat password"
+              type="password"
+              placeholder="Confirm Password"
+              className={styles.input}
             />
-            <button onClick={hendleSubmit} disabled={isLoading}>
-              {isLoading ? "Loading..." : "Create an account"}
+            <button
+              className={styles.button}
+              type="submit"
+              disabled={isLoading}
+            >
+              {isLoading ? "Loading..." : "Register"}
             </button>
-            <p>
-              Already have an account? <Link to="/login">Login</Link>
+            <p className={styles.p}>
+              Already have an account?{" "}
+              <Link className={styles.a} to="/login">
+                Login
+              </Link>
             </p>
-          </form>
+          </div>
         </div>
       </div>
     </div>

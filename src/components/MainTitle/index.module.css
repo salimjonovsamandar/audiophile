@@ -2,8 +2,9 @@
   width: 100%;
   background: #131313;
 }
-.title_container header {
-  width: 1110px;
+.title_container .header {
+  max-width: 1110px;
+  width: 100%;
   height: 200px;
   display: flex;
   align-items: center;
@@ -11,13 +12,12 @@
   margin-left: auto;
   margin-right: auto;
 }
-.title_container header h1 {
+.title_container .header h1 {
   color: rgb(255, 255, 255);
   font-size: 40px;
   font-weight: 700;
   line-height: 44px;
   letter-spacing: 1.4285714626312256px;
   text-align: center;
-  
-
 }
+

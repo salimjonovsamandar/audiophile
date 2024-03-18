@@ -6,9 +6,13 @@ import Audio from "../../components/Audio";
 import MainTitle from "../../components/MainTitle";
 import LeftImages from "../../components/LeftImages";
 
-
 function Headphones() {
   const { page } = useParams();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 
   return (
     <>
