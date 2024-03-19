@@ -1,14 +1,14 @@
 .checkout__wrapper {
   background: rgb(242, 242, 242);
 }
-form {
+.form {
   width: 730px;
   padding: 54px 48px;
   border-radius: 8px;
   background: rgb(255, 255, 255);
 }
-form h2 {
-  color: rgb(0, 0, 0);
+.form h2 {
+  color: black;
   font-size: 32px;
   font-weight: 700;
   line-height: 36px;
@@ -17,7 +17,7 @@ form h2 {
   text-transform: uppercase;
   margin-bottom: 41px;
 }
-form p {
+.form p {
   color: rgb(216, 125, 74);
   font-size: 13px;
   font-weight: 700;
@@ -26,24 +26,24 @@ form p {
   text-align: left;
   text-transform: uppercase;
 }
-.name__email {
+.DETAILS {
   display: flex;
   gap: 16px;
 }
-.name__email label {
+.DETAILS label {
   width: 50%;
 }
-form label p {
+.form label p {
   margin-top: 24px;
   margin-bottom: 9px;
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: -0.21px;
   text-align: left;
 }
-form input {
+.form input {
   box-sizing: border-box;
   border: 1px solid rgb(207, 207, 207);
   border-radius: 8px;
@@ -79,7 +79,7 @@ input[type="radio"] {
   display: flex;
 }
 .method p {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
@@ -87,7 +87,7 @@ input[type="radio"] {
   text-align: left;
 }
 .method h3 {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 14px;
   font-weight: 700;
   line-height: 19px;
@@ -119,7 +119,7 @@ input[type="radio"] {
 }
 .details h2 {
   margin-bottom: 31px;
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;
@@ -146,7 +146,7 @@ input[type="radio"] {
   justify-content: space-between;
 }
 .card h3 {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 15px;
   font-weight: 700;
   line-height: 25px;
@@ -154,7 +154,7 @@ input[type="radio"] {
   text-align: left;
 }
 .card p {
-  color: rgb(0, 0, 0);
+  color: black;
   opacity: 0.5;
   font-size: 14px;
   font-weight: 700;
@@ -163,7 +163,7 @@ input[type="radio"] {
   text-align: left;
 }
 .card span {
-  color: rgb(0, 0, 0);
+  color: black;
   opacity: 0.5;
   font-size: 15px;
   font-weight: 700;
@@ -182,7 +182,7 @@ input[type="radio"] {
   gap: 8px;
 }
 .info1 h4 {
-  color: rgb(0, 0, 0);
+  color: black;
   opacity: 0.5;
   font-size: 15px;
   font-weight: 400;
@@ -191,7 +191,7 @@ input[type="radio"] {
   text-align: left;
 }
 .info1 span {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;
@@ -255,7 +255,7 @@ input[type="radio"] {
 }
 .modal > h2 {
   margin-bottom: 24px;
-  color: rgb(0, 0, 0);
+  color: black;
   width: 284px;
   font-size: 32px;
   font-weight: 700;
@@ -266,7 +266,7 @@ input[type="radio"] {
 }
 .modal > p {
   margin-bottom: 33px;
-  color: rgb(0, 0, 0);
+  color: black;
   opacity: 0.5;
   font-size: 15px;
   font-weight: 400;
@@ -296,7 +296,7 @@ input[type="radio"] {
   justify-content: space-between;
 }
 .card__modal h5 {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 15px;
   font-weight: 700;
   line-height: 25px;
@@ -305,7 +305,7 @@ input[type="radio"] {
 }
 .card__modal h4 {
   opacity: 0.5;
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 14px;
   font-weight: 700;
   line-height: 25px;
@@ -313,7 +313,7 @@ input[type="radio"] {
   text-align: left;
 }
 .card__info p {
-  color: rgb(0, 0, 0);
+  color: black;
   opacity: 0.5;
   display: block;
   margin-top: 12px;
@@ -326,8 +326,8 @@ input[type="radio"] {
 .black__info {
   width: 300px;
   border-radius: 0px 8px 8px 0px;
-  background: rgb(0, 0, 0);
   padding: 41px 32px;
+  background: black;
 }
 .black__info p {
   margin-bottom: 8px;
@@ -348,7 +348,6 @@ input[type="radio"] {
   text-transform: uppercase;
 }
 .modal button {
-  cursor: pointer;
   margin-top: 46px;
   background: rgb(216, 125, 74);
   width: 100%;
@@ -361,19 +360,16 @@ input[type="radio"] {
   letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .modal {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.go {
-  padding: 50px 165px 0;
-}
-
 .Back {
   margin-top: 79px;
   font-size: 15px;

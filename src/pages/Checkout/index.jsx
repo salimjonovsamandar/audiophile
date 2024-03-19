@@ -51,18 +51,18 @@ function Checkout() {
   return (
     <>
       <div
-        style={show ? { backgroundColor: "black", opacity: "0.4" } : {}}
+        style={show ? { backgroundColor: "black", opacity: "0.2" } : {}}
         className={styles.checkout__wrapper}
       >
         <button onClick={goBack} className={styles.Back}>
           Go Back
         </button>
         <div className={styles.form__wrapper}>
-          <form>
+          <form className={styles.form}>
             <h2>CHECKOUT</h2>
             <div className={styles.build}>
               <p>Payment Details</p>
-              <div className={styles.name__email}>
+              <div className={styles.DETAILS}>
                 <label>
                   <p>Name</p>
                   <input type="text" placeholder="Alexei Ward" />
