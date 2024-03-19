@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "./index.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import React from "react";
+import styles from "./index.module.css";
 import Loader from "../Loader";
 
 function HeroCard() {

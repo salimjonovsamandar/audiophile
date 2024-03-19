@@ -20,14 +20,13 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check for missing token and redirect only if necessary
     if (
       !localStorage.getItem("token") &&
       window.location.pathname !== "/register"
     ) {
       navigate("/login");
     }
-  }, []); // Empty dependency array for initial token check
+  }, []);
 
   function ProtectedRoute({
     children,

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "../Modal/index.module.css";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
+import styles from "../Modal/index.module.css";
 
 function index({ setModal }) {
   const [count, setCount] = useState(1);

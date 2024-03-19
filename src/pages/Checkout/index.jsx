@@ -1,11 +1,9 @@
-import { useDispatch } from "react-redux";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./index.module.css";
 import { useNavigate } from "react-router";
+import styles from "./index.module.css";
 
 function Checkout() {
-  const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   let total = 0;
   const [products, setProducts] = useState([]);

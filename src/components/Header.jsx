@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import styles from "./index.module.css";
 import shape from "../assets/shape.svg";
 import hamburger from "../assets/hamburger.svg";
 import logo from "../assets/logo.svg";
 import Modal from "../components/Modal";
-import { useEffect } from "react";
 
 function Header() {
   const [show, setShow] = useState(false);
-  const [content, setContent] = useState("");
   const [modal, setModal] = useState(false);
-  const navigate = useNavigate();
 
   function showNav() {
     if (show) {

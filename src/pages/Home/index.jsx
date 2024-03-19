@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import styles from "./index.module.css";
-import { Link } from "react-router-dom";
 import stein from "../../assets/stein.png";
 import earphones from "../../assets/earphones.png";
 import Cards from "../../components/Cards";
